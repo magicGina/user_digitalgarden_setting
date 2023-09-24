@@ -1,0 +1,13 @@
+<script>
+window.onload=function() {
+	let imgSpans = document.getElementsByClassName("internal-embed");
+	for(let i = 0; i < imgSpans.length; i++)
+	{
+		let src = imgSpans[i].getAttribute("src");
+		if(imgSpans[i].tagName=="SPAN"&&(src.endsWith(".jpg")||src.endsWith(".png"))){
+			let img = "<img src=\"/img/user/"+src+"\" width=\""+imgSpans[i].innerHTML+"px\">"
+			imgSpans[i].innerHTML = img;
+		}
+	}
+}
+</script>

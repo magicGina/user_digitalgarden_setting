@@ -1,0 +1,16 @@
+.table-wide table{
+	width : 90%;
+}
+.cards td{
+	border-right : none;
+	border-left : none;
+}
+.cards td:nth-child(2){
+	height: 3rem;
+}
+.cards tr{
+	border: 3px;
+}
+.ob-timelines{
+	display : none;
+}

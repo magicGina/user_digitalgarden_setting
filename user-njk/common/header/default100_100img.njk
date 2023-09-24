@@ -1,0 +1,16 @@
+<script>
+function set_img_100(){
+	let imgs_on_page = document.getElementsByTagName('img');
+	for(let img of imgs_on_page){
+		if(img.parentNode.parentNode.tagName =="P"&&img.parentNode.parentNode.parentNode.tagName=="MAIN"){
+			if(img.alt.endsWith(".jpg")||img.alt.endsWith(".png")){
+				img.setAttribute('style', 'width:100%');
+			}else{
+				img.setAttribute('style', 'vertical-align:middle');
+				// img.parentNode.parentNode.setAttribute('style', 'text-align:center');
+			}
+		}
+	}
+}
+setTimeout(set_img_100, 1);
+</script>

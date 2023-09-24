@@ -1,0 +1,20 @@
+<script>
+const addMeta = (name, content) => {
+    const meta = document.createElement('meta');
+    meta.name = name;
+    meta.content = content;
+    document.getElementsByTagName('head')[0].appendChild(meta);
+};
+
+function reLazyLoadImg() {
+    const images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
+        let src = images[i].getAttribute("src")
+            if (src.startsWith("https://i0.hdslb.com")) {
+                images[i].src = src;
+            }
+    }
+}
+addMeta("referrer", "no-referrer");
+document.addEventListener('DOMContentLoaded', reLazyLoadImg);
+</script>

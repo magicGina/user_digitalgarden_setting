@@ -1,0 +1,17 @@
+<script>
+function init_copy_btns(){
+	let copy_btns = document.getElementsByClassName('btn-copy-1');
+	for(let copy_btn of copy_btns){
+		copy_btn.onclick = function(){
+			let copy_input = copy_btn.previousSibling;
+			try {
+				navigator.clipboard.writeText(copy_input.value);
+			} catch (err) {
+				copy_input.select();
+				document.execCommand('copy');
+			}
+		}
+	}
+}
+setTimeout(init_copy_btns, 500);
+</script>
